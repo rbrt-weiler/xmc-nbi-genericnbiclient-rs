@@ -3,9 +3,10 @@ extern crate reqwest;
 
 use clap::{Arg, App};
 use reqwest::{Client, Error};
+use std::time::Duration;
 
 const TOOL_NAME:&str = "XMC NBI GenericNbiClient.rs";
-const TOOL_VERSION:&str = "0.1.0";
+const TOOL_VERSION:&str = "0.2.0";
 
 fn main() -> Result<(), Error> {
 	let args = App::new(TOOL_NAME)
@@ -60,12 +61,11 @@ fn main() -> Result<(), Error> {
 		.get_matches();
 
 	let xmc_host = args.value_of("host").unwrap();
-	let http_port = args.value_of("port").unwrap();
-	let http_timeout = args.value_of("httptimeout").unwrap();
+	let http_port:u16 = args.value_of("port").unwrap().parse().unwrap();
+	let http_timeout:u16 = args.value_of("httptimeout").unwrap().parse().unwrap();
+	let mut insecure_https = false;
 	if args.is_present("insecurehttps") {
-		let insecure_https = true;
-	} else {
-		let insecure_https = false;
+		insecure_https = true;
 	}
 	let http_username = args.value_of("username").unwrap();
 	let http_password = args.value_of("password").unwrap();
@@ -73,16 +73,19 @@ fn main() -> Result<(), Error> {
 
 	let api_url = format!("https://{}:{}/nbi/graphql", xmc_host, http_port);
 	let http_user_agent = format!("{}/{}", TOOL_NAME, TOOL_VERSION);
-	let mut response = Client::new()
-		.get(&api_url)
+
+	let client = Client::builder()
+		.danger_accept_invalid_certs(insecure_https)
+		.timeout(Duration::from_secs(http_timeout.into()))
+		.build()?;
+	let mut response = client.get(&api_url)
 		.header("User-Agent", http_user_agent)
 		.header("Accept", "application/json")
 		.basic_auth(http_username, Some(http_password))
 		.query(&[("query", xmc_query)])
 		.send()?;
 
-	println!("Calling {}", api_url);
-	println!("{:#?}", response);
+	println!("{}", response.text()?);
 
 	Ok(())
 }
