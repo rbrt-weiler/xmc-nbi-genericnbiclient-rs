@@ -1,0 +1,10 @@
+[package]
+name = "xmc-nbi-genericnbiclient-rs"
+version = "0.1.0"
+authors = ["Robert WEILER <rbrt-weiler@mailbox.org>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33"
+reqwest = "0.9"
+
