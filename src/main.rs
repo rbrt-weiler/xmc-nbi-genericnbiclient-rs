@@ -35,8 +35,6 @@ fn main() -> Result<(), Error> {
 		.arg(Arg::with_name("insecurehttps")
 			.short("I")
 			.long("insecurehttps")
-			.value_name("BOOL")
-			.default_value("0")
 			.help("Do not validate HTTPS certificates"))
 		.arg(Arg::with_name("username")
 			.short("U")
