@@ -2,6 +2,8 @@
 
 GenericNbiClient sends a query to the GraphQL-based API provided by the Northbound Interface (NBI) of [Extreme Management Center (XMC)](https://www.extremenetworks.com/product/extreme-management-center/) and prints the raw JSON response to stdout.
 
+**Notice**: This project has surfaced as a proof of concept and is _not maintained_ anymore. If you need a production ready NBI client, please refer to [the Go version of GenericNbiClient](https://gitlab.com/rbrt-weiler/xmc-nbi-genericnbiclient-go).
+
 ## Branches
 
 This project uses two defined branches:
