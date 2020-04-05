@@ -8,8 +8,8 @@ GenericNbiClient sends a query to the GraphQL-based API provided by the Northbou
 
 This project uses two defined branches:
 
-  * `master` is the primary development branch. Code within `master` may be broken at any time.
-  * `stable` is reserved for code that compiles without errors and is tested. Track `stable` if you just want to use the software.
+* `master` is the primary development branch. Code within `master` may be broken at any time.
+* `stable` is reserved for code that compiles without errors and is tested. Track `stable` if you just want to use the software.
 
 Other branches, for example for developing specific features, may be created and deleted at any time.
 
@@ -23,7 +23,7 @@ Tested with cargo 1.34.0 / rustc 1.34.2.
 
 `xmc-nbi-genericnbiclient-rs -h` (either in ./target/debug/ or ./targt/release/):
 
-<pre>
+```text
 USAGE:
     xmc-nbi-genericnbiclient-rs [FLAGS] [OPTIONS] --host &lt;STRING&gt;
 
@@ -40,7 +40,7 @@ OPTIONS:
     -Q, --query &lt;STRING&gt;       GraphQL query to send to XMC [default: query { network { devices { up ip sysName nickName
                                } } }]
     -U, --username &lt;STRING&gt;    Username for HTTP auth [default: admin]
-</pre>
+```
 
 ## Source
 
