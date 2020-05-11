@@ -5,7 +5,8 @@ stages:
 
 build-release-executable:
   stage: build
-  only:
-    - stable
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+      when: always
   script:
     - cargo build --release
