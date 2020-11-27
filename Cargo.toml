@@ -5,6 +5,5 @@ authors = ["Robert WEILER <rbrt-weiler@mailbox.org>"]
 edition = "2018"
 
 [dependencies]
-clap = "2.33"
-reqwest = "0.9"
-
+clap = "2.33.3"
+reqwest = "0.9.24"

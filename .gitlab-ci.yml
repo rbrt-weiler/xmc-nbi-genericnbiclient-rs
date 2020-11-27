@@ -1,4 +1,4 @@
-image: rust:1.34
+image: rust:1.48
 
 stages:
   - build
