@@ -8,3 +8,10 @@ indent_size = 4
 tab_width = 4
 trim_trailing_whitespace = false
 insert_final_newline = false
+
+[{*.json,*.md}]
+indent_style = space
+
+[*.yml]
+indent_style = space
+indent_size = 2
