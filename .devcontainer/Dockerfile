@@ -1,3 +1,3 @@
-FROM rust:1.39
+FROM rust:1.48
 
 CMD [ "/bin/bash" ]
