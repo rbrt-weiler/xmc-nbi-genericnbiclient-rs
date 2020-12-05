@@ -17,7 +17,7 @@ Other branches, for example for developing specific features, may be created and
 
 Use `cargo run` to build (with debug information) and run the tool directly or `cargo build --release` to compile an optimized binary without debug information.
 
-Tested with cargo 1.34.0 / rustc 1.34.2.
+Tested with cargo 1.48.0 / rustc 1.48.0.
 
 ## Usage
 
