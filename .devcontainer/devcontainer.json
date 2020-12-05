@@ -2,34 +2,29 @@
     "name": "Rust VS Code Remote Container",
     "dockerFile": "Dockerfile",
     "extensions": [
-        "davidanson.vscode-markdownlint",
-		"editorconfig.editorconfig",
         "helixquar.asciidecorator",
-        "ms-vscode.go",
-        "vscode-icons-team.vscode-icons",
-		"wayou.vscode-todo-highlight"
+		"aaron-bond.better-comments",
+		"editorconfig.editorconfig",
+		"tamasfe.even-better-toml",
+		"yzhang.markdown-all-in-one",
+		"vscode-icons-team.vscode-icons",
+        "davidanson.vscode-markdownlint"
     ],
     "settings": {
         "asciidecorator.defaultFont": "Banner3",
-        "editor.cursorBlinking": "phase",
-        "editor.fontFamily": "Menlo, 'Liberation Mono', Consolas, 'Courier New', monospace",
-        "editor.insertSpaces": false,
-        "editor.wordWrap": "on",
-        "telemetry.enableTelemetry": false,
+		"editor.cursorBlinking": "phase",
+		"editor.detectIndentation": true,
+		"editor.fontFamily": "Menlo, 'Liberation Mono', Consolas, 'Courier New', monospace",
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4,
+		"editor.wordWrap": "on",
+		"markdownlint.config": {
+			"default": true,
+			"no-hard-tabs": true
+		},
+		"telemetry.enableTelemetry": false,
+		"terminal.integrated.cursorBlinking": true,
         "terminal.integrated.shell.linux": "/bin/bash",
-        "todohighlight.include": [
-            "**/*.js",
-            "**/*.jsx",
-            "**/*.ts",
-            "**/*.tsx",
-            "**/*.html",
-            "**/*.php",
-            "**/*.css",
-            "**/*.scss",
-            "**/*.go",
-            "**/*.rs",
-            "**/*.cs"
-        ],
         "workbench.editor.highlightModifiedTabs": true,
         "workbench.iconTheme": "vscode-icons"
     }
