@@ -3,10 +3,11 @@
     "dockerFile": "Dockerfile",
     "extensions": [
         "davidanson.vscode-markdownlint",
+		"editorconfig.editorconfig",
         "helixquar.asciidecorator",
         "ms-vscode.go",
         "vscode-icons-team.vscode-icons",
-        "wayou.vscode-todo-highlight"
+		"wayou.vscode-todo-highlight"
     ],
     "settings": {
         "asciidecorator.defaultFont": "Banner3",
