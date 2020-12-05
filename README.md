@@ -25,7 +25,7 @@ Tested with cargo 1.48.0 / rustc 1.48.0.
 
 ```text
 USAGE:
-    xmc-nbi-genericnbiclient-rs [FLAGS] [OPTIONS] --host &lt;STRING&gt;
+    xmc-nbi-genericnbiclient-rs [FLAGS] [OPTIONS] --host <STRING>
 
 FLAGS:
     -h, --help             Prints help information
@@ -33,13 +33,13 @@ FLAGS:
     -V, --version          Prints version information
 
 OPTIONS:
-    -H, --host &lt;STRING&gt;        XMC Hostname / IP
-    -T, --httptimeout &lt;INT&gt;    Timeout for HTTP(S) connections [default: 5]
-    -W, --password &lt;STRING&gt;    Password for HTTP auth [default: ]
-    -P, --port &lt;INT&gt;           HTTP port where XMC is listening [default: 8443]
-    -Q, --query &lt;STRING&gt;       GraphQL query to send to XMC [default: query { network { devices { up ip sysName nickName
+    -H, --host <STRING>        XMC Hostname / IP
+    -T, --httptimeout <INT>    Timeout for HTTP(S) connections [default: 5]
+    -W, --password <STRING>    Password for HTTP auth [default: ]
+    -P, --port <INT>           HTTP port where XMC is listening [default: 8443]
+    -Q, --query <STRING>       GraphQL query to send to XMC [default: query { network { devices { up ip sysName nickName
                                } } }]
-    -U, --username &lt;STRING&gt;    Username for HTTP auth [default: admin]
+    -U, --username <STRING>    Username for HTTP auth [default: admin]
 ```
 
 ## Source
